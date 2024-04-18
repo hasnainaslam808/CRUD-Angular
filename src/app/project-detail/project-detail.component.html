@@ -1,0 +1,26 @@
+<div class="col-md-4 mt-5">
+    <div class="card border-0 shadow p-3">
+      <div class="form-floating mb-3 text-center">
+        <h5 for="firstName" class="text-warning">Add Project</h5>
+      </div>
+      <div class="form-floating mb-3">
+        <input type="email" class="form-control" [(ngModel)]="project.projectName" id="projectName" name="projectName" >
+        <label for="firstName">Project Name</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" [(ngModel)]="project.city" id="city" name="city" >
+        <label for="lastName">City</label>
+      </div>
+
+      <div class="form-floating mb-3">
+        <input type="email" class="form-control" [(ngModel)]="project.address" id="address" name="address" >
+        <label for="email"> address</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" [(ngModel)]="project.phone" id="phone" name="phone" >
+        <label for="mobile">Phone h</label>
+      </div>
+      <button type="button" class="btn btn-outline-success" (click)="addProjectMaster()" *ngIf="!isEditingProject">Add Project</button>
+      <button type="button" class="btn btn-outline-success" (click)="updateProject()" *ngIf="isEditingProject">Update Project</button>
+    </div>
+  </div>
